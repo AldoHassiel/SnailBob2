@@ -7,7 +7,7 @@ valid=false
 
 [deps]
 
-source_file="res://Assets/Sonidos/efectos/lever.mp3"
+source_file="res://Assets/Sonidos/Efectos/lever.mp3"
 
 [params]
 
