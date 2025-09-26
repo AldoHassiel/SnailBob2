@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvi3mi62f6p8s"]
+
+[ext_resource type="Texture2D" uid="uid://jbwo2uwbh2ow" path="res://Assets/Imagenes/Botones/soundButton.png" id="1_8el6j"]
+[ext_resource type="Script" uid="uid://cw3eag7oqxlkm" path="res://Scripts/BotonSonido.gd" id="2_jscgx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jscgx"]
+atlas = ExtResource("1_8el6j")
+region = Rect2(0, 0, 92, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohcdt"]
+atlas = ExtResource("1_8el6j")
+region = Rect2(0, 92, 92, 92)
+
+[node name="BotonSonido" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_jscgx")
+texture_pressed = SubResource("AtlasTexture_ohcdt")
+script = ExtResource("2_jscgx")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]
