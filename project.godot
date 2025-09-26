@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="SnailBob2"
+run/main_scene="uid://bisgqscc4v45y"
+config/features=PackedStringArray("4.5", "Forward Plus")
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=640
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "purple",
+"res://Escenas/": "pink",
+"res://Scripts/": "yellow"
+}
