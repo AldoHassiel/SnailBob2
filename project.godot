@@ -14,6 +14,10 @@ config/name="SnailBob2"
 run/main_scene="uid://bisgqscc4v45y"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[autoload]
+
+AudioManager="*res://Scripts/Globales/AudioManager.gd"
+
 [display]
 
 window/size/viewport_width=960
