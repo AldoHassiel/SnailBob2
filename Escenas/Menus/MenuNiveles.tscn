@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc63duqr58rln"]
+[gd_scene load_steps=13 format=3 uid="uid://dc63duqr58rln"]
 
 [ext_resource type="Texture2D" uid="uid://cltur03jtvgl6" path="res://Assets/Imagenes/Niveles/LevelsMap.jpg" id="1_3oy6h"]
 [ext_resource type="Script" uid="uid://b5ykwfyb54vlg" path="res://Scripts/Menus/MenuNivel.gd" id="1_djuey"]
@@ -6,6 +6,24 @@
 [ext_resource type="Texture2D" uid="uid://bkcod36h1yqqr" path="res://Assets/Imagenes/Botones/menu_btn.png" id="3_41ohw"]
 [ext_resource type="PackedScene" uid="uid://cvi3mi62f6p8s" path="res://Escenas/Botones/BotonSonido.tscn" id="4_pfmnj"]
 [ext_resource type="PackedScene" uid="uid://eevc5jwkgw5c" path="res://Escenas/Personajes/NPC/MoscoMenu.tscn" id="6_41ohw"]
+[ext_resource type="Texture2D" uid="uid://bn23pbc4tfpi2" path="res://Assets/Imagenes/UI/score_num.png" id="7_pfmnj"]
+[ext_resource type="Script" uid="uid://b37unoua3bmiu" path="res://Scripts/TotalPuntuacion.gd" id="7_yyhmk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyhmk"]
+atlas = ExtResource("7_pfmnj")
+region = Rect2(0, 64, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lti44"]
+atlas = ExtResource("7_pfmnj")
+region = Rect2(0, 224, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x43f2"]
+atlas = ExtResource("7_pfmnj")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlp4w"]
+atlas = ExtResource("7_pfmnj")
+region = Rect2(0, 0, 24, 32)
 
 [node name="MenuNiveles" type="Control"]
 layout_mode = 3
@@ -228,5 +246,40 @@ direccion = -1
 position = Vector2(689, 136)
 scale = Vector2(0.7, 0.7)
 direccion = -1
+
+[node name="TotalPuntuacion" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 60.0
+offset_top = 17.0
+offset_right = 156.0
+offset_bottom = 57.0
+grow_horizontal = 2
+script = ExtResource("7_yyhmk")
+textura_digitos = ExtResource("7_pfmnj")
+metadata/_edit_group_ = true
+
+[node name="ContenedorHorizontal" type="HBoxContainer" parent="TotalPuntuacion"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Digito1" type="TextureRect" parent="TotalPuntuacion/ContenedorHorizontal"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_yyhmk")
+
+[node name="Digito2" type="TextureRect" parent="TotalPuntuacion/ContenedorHorizontal"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_lti44")
+
+[node name="Digito3" type="TextureRect" parent="TotalPuntuacion/ContenedorHorizontal"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_x43f2")
+
+[node name="Digito4" type="TextureRect" parent="TotalPuntuacion/ContenedorHorizontal"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wlp4w")
 
 [connection signal="pressed" from="BotonMenu" to="." method="_on_boton_menu_pressed"]

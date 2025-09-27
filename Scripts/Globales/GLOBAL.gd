@@ -10,6 +10,6 @@ var datos_progreso : Dictionary = {
 	"niveles_desbloqueados" : 1,
 	"puntuacion_total" : 0,
 	"puntuacion_niveles" : {
-		1 : 270
+		1 : 0
 	},
 }
