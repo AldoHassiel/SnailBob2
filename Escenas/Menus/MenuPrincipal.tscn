@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bisgqscc4v45y"]
+[gd_scene load_steps=27 format=3 uid="uid://bisgqscc4v45y"]
 
 [ext_resource type="Texture2D" uid="uid://bopfc3bqrv5j7" path="res://Assets/Imagenes/Niveles/menuBack.jpg" id="1_ms1us"]
 [ext_resource type="Texture2D" uid="uid://c5wokvrt8k54f" path="res://Assets/Imagenes/Botones/play.png" id="2_88hp4"]
@@ -6,6 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://c7fytd64nb0ri" path="res://Assets/Imagenes/Personajes/bobMenu.png" id="4_mcs3i"]
 [ext_resource type="PackedScene" uid="uid://cvi3mi62f6p8s" path="res://Escenas/Botones/BotonSonido.tscn" id="5_88hp4"]
 [ext_resource type="PackedScene" uid="uid://eevc5jwkgw5c" path="res://Escenas/Personajes/NPC/MoscoMenu.tscn" id="6_1iu40"]
+
+[sub_resource type="GDScript" id="GDScript_1iu40"]
+script/source = "extends Control
+
+func _on_boton_jugar_pressed() -> void:
+	EscenasManager.cambiar_escena(EscenasManager.Escenas.Menu_Niveles)
+
+func _on_boton_creditos_pressed() -> void:
+	pass
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ithg5"]
 atlas = ExtResource("2_88hp4")
@@ -130,6 +140,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_1iu40")
 
 [node name="Fondo" type="TextureRect" parent="."]
 layout_mode = 0
@@ -198,3 +209,6 @@ position = Vector2(206, 415)
 position = Vector2(824, 208)
 flip_h = true
 direccion = -1
+
+[connection signal="pressed" from="ContenedorBotones/ContenedorCentrador1/BotonJugar" to="." method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="ContenedorBotones/ContenedorCentrador2/BotonCreditos" to="." method="_on_boton_creditos_pressed"]
