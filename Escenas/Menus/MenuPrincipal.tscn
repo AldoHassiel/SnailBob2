@@ -1,9 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://bisgqscc4v45y"]
+[gd_scene load_steps=26 format=3 uid="uid://bisgqscc4v45y"]
 
 [ext_resource type="Texture2D" uid="uid://bopfc3bqrv5j7" path="res://Assets/Imagenes/Niveles/menuBack.jpg" id="1_ms1us"]
 [ext_resource type="Texture2D" uid="uid://c5wokvrt8k54f" path="res://Assets/Imagenes/Botones/play.png" id="2_88hp4"]
 [ext_resource type="Texture2D" uid="uid://chkcgm1ilywq5" path="res://Assets/Imagenes/Botones/credits.png" id="3_1iu40"]
 [ext_resource type="Texture2D" uid="uid://c7fytd64nb0ri" path="res://Assets/Imagenes/Personajes/bobMenu.png" id="4_mcs3i"]
+[ext_resource type="PackedScene" uid="uid://cvi3mi62f6p8s" path="res://Escenas/Botones/BotonSonido.tscn" id="5_88hp4"]
+[ext_resource type="PackedScene" uid="uid://eevc5jwkgw5c" path="res://Escenas/Personajes/NPC/MoscoMenu.tscn" id="6_1iu40"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ithg5"]
 atlas = ExtResource("2_88hp4")
@@ -174,3 +176,25 @@ sprite_frames = SubResource("SpriteFrames_fr7s7")
 autoplay = "default"
 frame = 4
 frame_progress = 0.51690555
+
+[node name="BotonSonido" parent="." instance=ExtResource("5_88hp4")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -176.0
+offset_right = 42.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MoscoMenu" parent="." instance=ExtResource("6_1iu40")]
+position = Vector2(206, 415)
+
+[node name="MoscoMenu2" parent="." instance=ExtResource("6_1iu40")]
+position = Vector2(824, 208)
+flip_h = true
+direccion = -1
