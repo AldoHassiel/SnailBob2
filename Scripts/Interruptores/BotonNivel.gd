@@ -55,7 +55,13 @@ func _on_pressed() -> void:
 
 func cargar_puntuacion():
 	if GLOBAL.datos_progreso["puntuacion_niveles"].has(numero_nivel):
-		var puntuacion = str(GLOBAL.datos_progreso["puntuacion_niveles"][numero_nivel])
+		var puntuacion : String
+		
+		if GLOBAL.datos_progreso["puntuacion_niveles"][numero_nivel] != 0:
+			puntuacion = str(GLOBAL.datos_progreso["puntuacion_niveles"][numero_nivel])
+		else:
+			puntuacion = ""
+			
 		puntuacion_nodo.text = "[font_size=12][b]" + puntuacion + "[/b][/font_size]"
 	else:
 		puntuacion_nodo.text = ""
