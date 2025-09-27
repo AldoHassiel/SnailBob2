@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 
 AudioManager="*res://Scripts/Globales/AudioManager.gd"
 DatosGlobales="*res://Scripts/Globales/DatosGlobales.gd"
+EscenasManager="*res://Scripts/Globales/EscenasManager.gd"
 
 [display]
 
