@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b21274cthsui8"]
+[gd_scene load_steps=7 format=3 uid="uid://dc63duqr58rln"]
 
 [ext_resource type="Texture2D" uid="uid://cltur03jtvgl6" path="res://Assets/Imagenes/Niveles/LevelsMap.jpg" id="1_3oy6h"]
 [ext_resource type="Script" uid="uid://b5ykwfyb54vlg" path="res://Scripts/Menus/MenuNivel.gd" id="1_djuey"]
-[ext_resource type="PackedScene" uid="uid://do8o7vqodhnfd" path="res://Escenas/Botones/BotonNivel.tscn" id="2_djuey"]
+[ext_resource type="PackedScene" path="res://Escenas/Botones/BotonNivel.tscn" id="2_djuey"]
 [ext_resource type="Texture2D" uid="uid://bkcod36h1yqqr" path="res://Assets/Imagenes/Botones/menu_btn.png" id="3_41ohw"]
 [ext_resource type="PackedScene" uid="uid://cvi3mi62f6p8s" path="res://Escenas/Botones/BotonSonido.tscn" id="4_pfmnj"]
+[ext_resource type="PackedScene" uid="uid://eevc5jwkgw5c" path="res://Escenas/Personajes/NPC/MoscoMenu.tscn" id="6_41ohw"]
 
 [node name="MenuNiveles" type="Control"]
 layout_mode = 3
@@ -213,5 +214,19 @@ offset_bottom = 15.0
 grow_horizontal = 0
 grow_vertical = 0
 metadata/_edit_lock_ = true
+
+[node name="MoscoMenu" parent="." instance=ExtResource("6_41ohw")]
+position = Vector2(275, 127)
+scale = Vector2(0.7, 0.7)
+
+[node name="MoscoMenu2" parent="." instance=ExtResource("6_41ohw")]
+position = Vector2(413, 183)
+scale = Vector2(0.7, 0.7)
+direccion = -1
+
+[node name="MoscoMenu3" parent="." instance=ExtResource("6_41ohw")]
+position = Vector2(689, 136)
+scale = Vector2(0.7, 0.7)
+direccion = -1
 
 [connection signal="pressed" from="BotonMenu" to="." method="_on_boton_menu_pressed"]
