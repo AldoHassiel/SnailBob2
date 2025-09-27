@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://eevc5jwkgw5c"]
+
+[ext_resource type="Texture2D" uid="uid://bexvk3sfjgg8y" path="res://Assets/Imagenes/Enemigos/fly_menu.png" id="1_5opyb"]
+[ext_resource type="Script" uid="uid://bmf8rntrnhq20" path="res://Scripts/Mosco.gd" id="2_h8qkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vikm"]
+atlas = ExtResource("1_5opyb")
+region = Rect2(0, 0, 62, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e7dq"]
+atlas = ExtResource("1_5opyb")
+region = Rect2(0, 60, 62, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl0h1"]
+atlas = ExtResource("1_5opyb")
+region = Rect2(0, 120, 62, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqkvt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vikm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e7dq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl0h1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="MoscoMenu" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_qqkvt")
+autoplay = "default"
+script = ExtResource("2_h8qkg")
