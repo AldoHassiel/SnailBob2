@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvi3mi62f6p8s"]
 
 [ext_resource type="Texture2D" uid="uid://jbwo2uwbh2ow" path="res://Assets/Imagenes/Botones/soundButton.png" id="1_8el6j"]
-[ext_resource type="Script" uid="uid://cw3eag7oqxlkm" path="res://Scripts/BotonSonido.gd" id="2_jscgx"]
+[ext_resource type="Script" uid="uid://cw3eag7oqxlkm" path="res://Scripts/Interruptores/BotonSonido.gd" id="2_jscgx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jscgx"]
 atlas = ExtResource("1_8el6j")

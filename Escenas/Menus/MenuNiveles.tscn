@@ -1,0 +1,217 @@
+[gd_scene load_steps=6 format=3 uid="uid://b21274cthsui8"]
+
+[ext_resource type="Texture2D" uid="uid://cltur03jtvgl6" path="res://Assets/Imagenes/Niveles/LevelsMap.jpg" id="1_3oy6h"]
+[ext_resource type="Script" uid="uid://b5ykwfyb54vlg" path="res://Scripts/Menus/MenuNivel.gd" id="1_djuey"]
+[ext_resource type="PackedScene" uid="uid://do8o7vqodhnfd" path="res://Escenas/Botones/BotonNivel.tscn" id="2_djuey"]
+[ext_resource type="Texture2D" uid="uid://bkcod36h1yqqr" path="res://Assets/Imagenes/Botones/menu_btn.png" id="3_41ohw"]
+[ext_resource type="PackedScene" uid="uid://cvi3mi62f6p8s" path="res://Escenas/Botones/BotonSonido.tscn" id="4_pfmnj"]
+
+[node name="MenuNiveles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_djuey")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3oy6h")
+metadata/_edit_lock_ = true
+
+[node name="Niveles" type="Node" parent="."]
+
+[node name="BotonNivel" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 162.0
+offset_top = 111.0
+offset_right = 236.0
+offset_bottom = 183.0
+
+[node name="BotonNivel2" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 246.0
+offset_top = 175.0
+offset_right = 320.0
+offset_bottom = 247.0
+disabled = true
+numero_nivel = 2
+
+[node name="BotonNivel3" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 352.0
+offset_top = 218.0
+offset_right = 426.0
+offset_bottom = 290.0
+disabled = true
+numero_nivel = 3
+
+[node name="BotonNivel4" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 462.0
+offset_top = 186.0
+offset_right = 536.0
+offset_bottom = 258.0
+disabled = true
+numero_nivel = 4
+
+[node name="BotonNivel5" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 570.0
+offset_top = 167.0
+offset_right = 644.0
+offset_bottom = 239.0
+disabled = true
+numero_nivel = 5
+
+[node name="BotonNivel6" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 795.0
+offset_top = 124.0
+offset_right = 869.0
+offset_bottom = 196.0
+disabled = true
+numero_nivel = 6
+
+[node name="BotonNivel7" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 808.0
+offset_top = 296.0
+offset_right = 882.0
+offset_bottom = 368.0
+disabled = true
+numero_nivel = 7
+
+[node name="BotonNivel8" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 612.0
+offset_top = 273.0
+offset_right = 686.0
+offset_bottom = 345.0
+disabled = true
+numero_nivel = 8
+
+[node name="BotonNivel9" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 497.0
+offset_top = 304.0
+offset_right = 571.0
+offset_bottom = 376.0
+disabled = true
+numero_nivel = 9
+
+[node name="BotonNivel10" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 319.0
+offset_top = 328.0
+offset_right = 393.0
+offset_bottom = 400.0
+disabled = true
+numero_nivel = 10
+
+[node name="BotonNivel11" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 201.0
+offset_top = 294.0
+offset_right = 275.0
+offset_bottom = 366.0
+disabled = true
+numero_nivel = 11
+
+[node name="BotonNivel12" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 99.0
+offset_top = 261.0
+offset_right = 173.0
+offset_bottom = 333.0
+disabled = true
+numero_nivel = 12
+
+[node name="BotonNivel13" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 56.0
+offset_top = 337.0
+offset_right = 130.0
+offset_bottom = 409.0
+disabled = true
+numero_nivel = 13
+
+[node name="BotonNivel14" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 88.0
+offset_top = 437.0
+offset_right = 162.0
+offset_bottom = 509.0
+disabled = true
+numero_nivel = 14
+
+[node name="BotonNivel15" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 188.0
+offset_top = 478.0
+offset_right = 262.0
+offset_bottom = 550.0
+disabled = true
+numero_nivel = 15
+
+[node name="BotonNivel16" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 295.0
+offset_top = 464.0
+offset_right = 369.0
+offset_bottom = 536.0
+disabled = true
+numero_nivel = 16
+
+[node name="BotonNivel17" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 405.0
+offset_top = 467.0
+offset_right = 479.0
+offset_bottom = 539.0
+disabled = true
+numero_nivel = 17
+
+[node name="BotonNivel18" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 507.0
+offset_top = 445.0
+offset_right = 581.0
+offset_bottom = 517.0
+disabled = true
+numero_nivel = 18
+
+[node name="BotonNivel19" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 599.0
+offset_top = 397.0
+offset_right = 673.0
+offset_bottom = 469.0
+disabled = true
+numero_nivel = 19
+
+[node name="BotonNivel20" parent="Niveles" instance=ExtResource("2_djuey")]
+offset_left = 691.0
+offset_top = 460.0
+offset_right = 765.0
+offset_bottom = 532.0
+disabled = true
+numero_nivel = 20
+
+[node name="BotonMenu" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -89.0
+offset_right = 160.0
+offset_bottom = 11.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_41ohw")
+metadata/_edit_lock_ = true
+
+[node name="BotonSonido" parent="." instance=ExtResource("4_pfmnj")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -77.0
+offset_right = -70.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BotonMenu" to="." method="_on_boton_menu_pressed"]

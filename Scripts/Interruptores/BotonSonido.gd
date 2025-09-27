@@ -8,6 +8,6 @@ func _ready() -> void:
 
 func _on_toggled(toggled_on: bool) -> void:
 	if !toggled_on:
-		AudioManager.reproducir_musica(DatosGlobales.MUSICA_POR_DEFECTO)
+		AudioManager.reproducir_musica(GLOBAL.MUSICA_POR_DEFECTO)
 	else:
 		AudioManager.detener_musica()

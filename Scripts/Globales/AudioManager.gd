@@ -1,6 +1,6 @@
 extends Node
 
-var hay_musica_reproduciendose : bool = DatosGlobales.REPRODUCIR_MUSICA_POR_DEFECTO
+var hay_musica_reproduciendose : bool = GLOBAL.REPRODUCIR_MUSICA_POR_DEFECTO
 
 var reproductor_musica: AudioStreamPlayer
 var reproductor_sonido : AudioStreamPlayer
@@ -17,8 +17,8 @@ func _ready() -> void:
 	reproductor_sonido.bus = "Sonido"
 	add_child(reproductor_sonido)
 	
-	if DatosGlobales.REPRODUCIR_MUSICA_POR_DEFECTO:
-		reproducir_musica(DatosGlobales.MUSICA_POR_DEFECTO)
+	if GLOBAL.REPRODUCIR_MUSICA_POR_DEFECTO:
+		reproducir_musica(GLOBAL.MUSICA_POR_DEFECTO)
 
 # Metodos para la musica
 func reproducir_musica(pista : AudioStream):

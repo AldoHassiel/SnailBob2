@@ -1,8 +1,8 @@
 extends TextureButton
+class_name Boton_Nivel
 
 @export_category("Configuración")
 @export var numero_nivel : int = 1
-@export var puntuacion : String = ""
 
 @export_category("Referencias")
 @export var numeros_textura : Texture2D
@@ -20,11 +20,10 @@ func _ready() -> void:
 		puntuacion_nodo.visible = false
 		contenedor.visible = false
 	
-	puntuacion_nodo.text = "[font_size=12][b]" + puntuacion + "[/b][/font_size]"
-	actualizar_numero()
-	
 	if not disabled:
 		mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	
+	actualizar_numero()
 
 func crear_atlas(digito: int):
 	var atlas = AtlasTexture.new()
@@ -33,6 +32,11 @@ func crear_atlas(digito: int):
 	return atlas
 
 func actualizar_numero():
+	if not disabled:
+		puntuacion_nodo.visible = true
+		contenedor.visible = true
+		mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	
 	@warning_ignore("integer_division")
 	var decena = numero_nivel / 10
 	var unidades = numero_nivel % 10
@@ -43,3 +47,15 @@ func actualizar_numero():
 	else:
 		digito1.texture = crear_atlas(decena)
 		digito2.texture = crear_atlas(unidades)
+	
+	cargar_puntuacion()
+
+func _on_pressed() -> void:
+	EscenasManager.cargar_nivel(numero_nivel)
+
+func cargar_puntuacion():
+	if GLOBAL.datos_progreso["puntuacion_niveles"].has(numero_nivel):
+		var puntuacion = str(GLOBAL.datos_progreso["puntuacion_niveles"][numero_nivel])
+		puntuacion_nodo.text = "[font_size=12][b]" + puntuacion + "[/b][/font_size]"
+	else:
+		puntuacion_nodo.text = ""
